@@ -1,0 +1,47 @@
+// sass --watch scss:css
+
+$white: #000000;
+$lightGrey: #efeded;
+$darkGrey: #474747;
+$black: #2c3e50;
+$green: #93ca44;
+
+$headerFont: "Lato";
+$bodyFont: "Merriweather";
+
+h1 {
+  color: $black;
+  font-family: $headerFont, sans-serif;
+  font-size: 34px;
+  font-weight: 300;
+}
+
+h2 {
+  color: $black;
+  font-family: $headerFont, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+h3 {
+  color: $black;
+  font-family: $headerFont, sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+p {
+  color: $darkGrey;
+  font-family: $bodyFont, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+a {
+  color: $green;
+  font-family: $headerFont, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
