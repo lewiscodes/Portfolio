@@ -45,3 +45,12 @@ a {
   font-weight: 600;
   text-decoration: none;
 }
+
+.section {
+  &.grey {
+    height: 500px;
+    width: 100%;
+    background-color: $lightGrey;
+    clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+  }
+}

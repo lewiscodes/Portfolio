@@ -1,5 +1,25 @@
 @import 'basics.scss';
 
 body {
-  background-color: $lightGrey;
+  .section {
+    .content {
+      text-align: center;
+    }
+    
+    &.header {
+      margin: 40px;
+      
+      .me {
+        height: 15%;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 0 4px 6px 2px lightGrey;
+      }
+      
+      .personalStatement {
+        width: 550px;
+        margin: auto;
+      }
+    }
+  }
 }

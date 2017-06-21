@@ -30,7 +30,23 @@ a {
   font-weight: 600;
   text-decoration: none; }
 
-body {
-  background-color: #efeded; }
+.section.grey {
+  height: 500px;
+  width: 100%;
+  background-color: #efeded;
+  clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%); }
+
+body .section .content {
+  text-align: center; }
+body .section.header {
+  margin: 40px; }
+  body .section.header .me {
+    height: 15%;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 0 4px 6px 2px lightGrey; }
+  body .section.header .personalStatement {
+    width: 550px;
+    margin: auto; }
 
 /*# sourceMappingURL=index.css.map */
