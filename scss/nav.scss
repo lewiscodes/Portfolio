@@ -1,0 +1,53 @@
+$navGrey: #a1b1bc;
+$navBlue: #1abc9c;
+
+body {
+  .header {
+    margin-top: 110px !important;
+  }
+}
+
+
+.navContainer {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 16px;
+    transition: padding 0.5s;
+
+    &.notTop {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    li {
+      list-style-type: none;
+      padding: 10px 25px;
+
+      &.name {
+        margin-right: auto;
+      }
+
+      a {
+        color: $navGrey;
+        font-weight: 300;
+
+        &:hover {
+          color: $navBlue;
+        }
+      }
+    }
+  }
+
+}
