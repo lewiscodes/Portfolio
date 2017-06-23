@@ -11,16 +11,39 @@ body {
       margin: 40px;
 
       .me {
-        height: 15%;
-        width: 15%;
+        height: 150px;
+        width: 150px;
         border-radius: 100%;
         box-shadow: 0 4px 6px 2px lightGrey;
       }
 
       .personalStatement {
-        width: 550px;
+        width: 400px;
         margin: auto;
       }
     }
   }
+}
+
+// tablet
+@media (min-width: 641px) {
+  body {
+    .section {
+      &.header {
+        .me {
+          height: 200px;
+          width: 200px;
+        }
+
+        .personalStatement {
+          width: 550px;
+        }
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: 1025px) {
+
 }

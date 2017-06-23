@@ -1,16 +1,21 @@
 $(window).on("scroll", function() {
-  animateNav();
+  if (getDevice() !== "mobile") {
+    animateNav();
+  }
 });
 
-$(window).on("resize", function() {
-  console.log(getDevice());
+$(window).on("resize load", function() {
+  var device = getDevice();
+  if (device === 'mobile') {
+    // $(".nav").css("display", "none");
+  } else if (device === 'tablet') {
+    // $(".nav").css("display", "block");
+  } else {
+    // $(".nav").css("display", "block");
+  }
 });
 
 function getDevice() {
-  // mobile: 0 - 640
-  // tablet: 640 - 1024
-  // desktop: 1024 +
-
   var width = $(window).width();
   if (width <= 640) {
     return "mobile";
