@@ -1,15 +1,13 @@
 @import 'basics.scss';
 @import 'nav.scss';
 
-body {
+.bodyContainer {
   .section {
     .content {
       text-align: center;
     }
 
     &.header {
-      margin: 40px;
-
       .me {
         height: 150px;
         width: 150px;
@@ -18,7 +16,6 @@ body {
       }
 
       .personalStatement {
-        width: 400px;
         margin: auto;
       }
     }
@@ -27,7 +24,7 @@ body {
 
 // tablet
 @media (min-width: 641px) {
-  body {
+  .bodyContainer {
     .section {
       &.header {
         .me {
