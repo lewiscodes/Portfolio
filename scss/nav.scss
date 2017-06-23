@@ -1,35 +1,87 @@
 $navGrey: #a1b1bc;
 $navBlue: #1abc9c;
 
+.bodyContainer {
+  transition: transform 1s ease-out;
+
+  &.open {
+    transform: translateX(-50%);
+  }
+
+  &.closed {
+    transform: translateX(0);
+  }
+
+
+  .header {
+    margin-top: 60px !important;
+  }
+}
+
 .navContainer {
   display: none;
 }
 
 .mobileNavContainer {
   display: block;
-  
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
   .mobileTopBar {
     height: 44px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    
+    z-index: 5;
+
     a {
       color: $navGrey;
       font-weight: 300;
       display: inline-block;
       padding: 10px 25px;
-      margin-left: 16px;
+      float: left;
     }
-    
+
     .mobileNavButton {
       display: inline-block;
-      
-      .one {
-        height: 44px;
-        width: 44px;
-        float: right;
-        background-color: blue;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 44px;
+      width: 44px;
+      transition: margin-right 1s ease-out;
+      background-color: blue;
+
+      &.open {
+        margin-right: 50%;
+      }
+
+      &.closed {
+        margin-right: 0;
       }
     }
+  }
+
+  .mobileNavWrapper {
+    border: 1px solid red;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: margin-right 1s ease-out;
+
+    &.closed {
+      margin-right: -50%;
+    }
+
+    &.open {
+      margin-right: 0;
+    }
+
+
+
   }
 }
 
@@ -40,7 +92,7 @@ $navBlue: #1abc9c;
       margin-top: 110px !important;
     }
   }
-  
+
   .mobileNavContainer {
     display: none;
   }
@@ -73,15 +125,15 @@ $navBlue: #1abc9c;
       li {
         list-style-type: none;
         padding: 10px 25px;
-        
+
         &.name {
           margin-right: auto;
         }
-        
+
         a {
           color: $navGrey;
           font-weight: 300;
-          
+
           &:hover {
             color: $navBlue;
           }

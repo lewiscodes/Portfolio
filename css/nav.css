@@ -1,24 +1,57 @@
+.bodyContainer {
+  transition: transform 1s ease-out; }
+  .bodyContainer.open {
+    transform: translateX(-50%); }
+  .bodyContainer.closed {
+    transform: translateX(0); }
+  .bodyContainer .header {
+    margin-top: 60px !important; }
+
 .navContainer {
   display: none; }
 
 .mobileNavContainer {
-  display: block; }
+  display: block;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10; }
   .mobileNavContainer .mobileTopBar {
     height: 44px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); }
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    z-index: 5; }
     .mobileNavContainer .mobileTopBar a {
       color: #a1b1bc;
       font-weight: 300;
       display: inline-block;
       padding: 10px 25px;
-      margin-left: 16px; }
+      float: left; }
     .mobileNavContainer .mobileTopBar .mobileNavButton {
-      display: inline-block; }
-      .mobileNavContainer .mobileTopBar .mobileNavButton .one {
-        height: 44px;
-        width: 44px;
-        float: right;
-        background-color: blue; }
+      display: inline-block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 44px;
+      width: 44px;
+      transition: margin-right 1s ease-out;
+      background-color: blue; }
+      .mobileNavContainer .mobileTopBar .mobileNavButton.open {
+        margin-right: 50%; }
+      .mobileNavContainer .mobileTopBar .mobileNavButton.closed {
+        margin-right: 0; }
+  .mobileNavContainer .mobileNavWrapper {
+    border: 1px solid red;
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: margin-right 1s ease-out; }
+    .mobileNavContainer .mobileNavWrapper.closed {
+      margin-right: -50%; }
+    .mobileNavContainer .mobileNavWrapper.open {
+      margin-right: 0; }
 
 @media (min-width: 641px) {
   .bodyContainer .header {

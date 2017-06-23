@@ -7,11 +7,12 @@ $(window).on("scroll", function() {
 $(window).on("resize load", function() {
   var device = getDevice();
   if (device === 'mobile') {
-    // $(".nav").css("display", "none");
+    closeMobileNav();
+    handleMobileNav();
   } else if (device === 'tablet') {
-    // $(".nav").css("display", "block");
+    closeMobileNav();
   } else {
-    // $(".nav").css("display", "block");
+    closeMobileNav();
   }
 });
 
@@ -34,4 +35,32 @@ function animateNav () {
   } else {
     $(".nav").addClass("notTop");
   }
+}
+
+function handleMobileNav() {
+  $(".mobileNavButton").on("click tap", function() {
+    if ($(".mobileNavButton").hasClass("open")) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
+  })
+}
+
+function openMobileNav() {
+  $(".mobileNavButton").removeClass("closed");
+  $(".mobileNavButton").addClass("open");
+  $(".mobileNavWrapper").removeClass("closed");
+  $(".mobileNavWrapper").addClass("open");
+  $(".bodyContainer").removeClass("closed");
+  $(".bodyContainer").addClass("open");
+}
+
+function closeMobileNav() {
+  $(".mobileNavButton").removeClass("open");
+  $(".mobileNavButton").addClass("closed");
+  $(".mobileNavWrapper").removeClass("open");
+  $(".mobileNavWrapper").addClass("closed");
+  $(".bodyContainer").removeClass("open");
+  $(".bodyContainer").addClass("closed");
 }
