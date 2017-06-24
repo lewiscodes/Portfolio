@@ -2,7 +2,7 @@ $navGrey: #a1b1bc;
 $navBlue: #1abc9c;
 
 .bodyContainer {
-  transition: transform 1s ease-out;
+  transition: transform .5s ease-out;
 
   &.open {
     transform: translateX(-50%);
@@ -50,27 +50,72 @@ $navBlue: #1abc9c;
       right: 0;
       height: 44px;
       width: 44px;
-      transition: margin-right 1s ease-out;
-      background-color: blue;
+      transition: margin-right .5s ease-out;
 
       &.open {
         margin-right: 50%;
+
+        .one {
+          transform: rotate(405deg) translate(12px, 4px)
+        }
+
+        .two {
+          display: none;
+        }
+
+        .three {
+          transform: rotate(-405deg) translate(3px, 4px);
+        }
       }
 
       &.closed {
         margin-right: 0;
+
+        .one {
+
+        }
+
+        .two {
+          display: block;
+        }
+
+        .three {
+
+        }
+      }
+
+      .one, .two, .three {
+        height: 5px;
+        width: 35px;
+        border-radius: 100px;
+        background-color: $lightGrey;
+        margin-top: 5px;
+        transition: transform .5s ease-out;
+      }
+
+      .one {
+        margin-top: 9px;
+      }
+
+      .two {
+
+      }
+
+      .three {
+
       }
     }
   }
 
   .mobileNavWrapper {
-    border: 1px solid red;
+    box-shadow: 13px 0 10px 10px black;
     width: 50%;
     height: 100vh;
     position: fixed;
     right: 0;
     top: 0;
-    transition: margin-right 1s ease-out;
+    transition: margin-right .5s ease-out;
+    background-color: $darkGrey;
 
     &.closed {
       margin-right: -50%;
@@ -80,8 +125,26 @@ $navBlue: #1abc9c;
       margin-right: 0;
     }
 
+    .mobileNav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
 
+      li {
+        list-style-type: none;
+        padding: 10px 25px;
 
+        a {
+          color: $navGrey;
+          font-weight: 300;
+
+          &:hover {
+            color: $navBlue;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -115,7 +178,7 @@ $navBlue: #1abc9c;
       margin-top: 0;
       margin-bottom: 0;
       padding: 16px;
-      transition: padding 0.5s;
+      transition: padding 0.25s;
 
       &.notTop {
         padding-top: 0;

@@ -37,7 +37,7 @@ a {
   clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%); }
 
 .bodyContainer {
-  transition: transform 1s ease-out; }
+  transition: transform .5s ease-out; }
   .bodyContainer.open {
     transform: translateX(-50%); }
   .bodyContainer.closed {
@@ -72,24 +72,54 @@ a {
       right: 0;
       height: 44px;
       width: 44px;
-      transition: margin-right 1s ease-out;
-      background-color: blue; }
+      transition: margin-right .5s ease-out; }
       .mobileNavContainer .mobileTopBar .mobileNavButton.open {
         margin-right: 50%; }
+        .mobileNavContainer .mobileTopBar .mobileNavButton.open .one {
+          transform: rotate(405deg) translate(12px, 4px); }
+        .mobileNavContainer .mobileTopBar .mobileNavButton.open .two {
+          display: none; }
+        .mobileNavContainer .mobileTopBar .mobileNavButton.open .three {
+          transform: rotate(-405deg) translate(3px, 4px); }
       .mobileNavContainer .mobileTopBar .mobileNavButton.closed {
         margin-right: 0; }
+        .mobileNavContainer .mobileTopBar .mobileNavButton.closed .two {
+          display: block; }
+      .mobileNavContainer .mobileTopBar .mobileNavButton .one, .mobileNavContainer .mobileTopBar .mobileNavButton .two, .mobileNavContainer .mobileTopBar .mobileNavButton .three {
+        height: 5px;
+        width: 35px;
+        border-radius: 100px;
+        background-color: #efeded;
+        margin-top: 5px;
+        transition: transform .5s ease-out; }
+      .mobileNavContainer .mobileTopBar .mobileNavButton .one {
+        margin-top: 9px; }
   .mobileNavContainer .mobileNavWrapper {
-    border: 1px solid red;
+    box-shadow: 13px 0 10px 10px black;
     width: 50%;
     height: 100vh;
     position: fixed;
     right: 0;
     top: 0;
-    transition: margin-right 1s ease-out; }
+    transition: margin-right .5s ease-out;
+    background-color: #474747; }
     .mobileNavContainer .mobileNavWrapper.closed {
       margin-right: -50%; }
     .mobileNavContainer .mobileNavWrapper.open {
       margin-right: 0; }
+    .mobileNavContainer .mobileNavWrapper .mobileNav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end; }
+      .mobileNavContainer .mobileNavWrapper .mobileNav li {
+        list-style-type: none;
+        padding: 10px 25px; }
+        .mobileNavContainer .mobileNavWrapper .mobileNav li a {
+          color: #a1b1bc;
+          font-weight: 300; }
+          .mobileNavContainer .mobileNavWrapper .mobileNav li a:hover {
+            color: #1abc9c; }
 
 @media (min-width: 641px) {
   .bodyContainer .header {
@@ -115,7 +145,7 @@ a {
       margin-top: 0;
       margin-bottom: 0;
       padding: 16px;
-      transition: padding 0.5s; }
+      transition: padding 0.25s; }
       .navContainer .nav.notTop {
         padding-top: 0;
         padding-bottom: 0; }
