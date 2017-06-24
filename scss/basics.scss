@@ -65,6 +65,21 @@ a {
   }
 }
 
+// .contact {
+//   cursor: pointer;
+//   padding: 15px 25px;
+//   background-color: $green;
+//   display: inline-block;
+//   color: white;
+//   font-family: $headerFont;
+//   border-radius: 10px;
+//   transition: background-color .25s ease-out;
+//
+//   &:hover {
+//     background-color: darken($green, 5%);
+//   }
+// }
+
 .section {
   &.grey {
     background-color: $lightGrey;

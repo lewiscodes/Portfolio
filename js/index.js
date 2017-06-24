@@ -16,6 +16,11 @@ $(window).on("resize load", function() {
   }
 });
 
+$(".contact").on("click tap", function() {
+  event.preventDefault();
+  
+});
+
 function getDevice() {
   var width = $(window).width();
   if (width <= 640) {

@@ -177,10 +177,19 @@ a {
 .bodyContainer .section .content {
   text-align: center; }
 .bodyContainer .section.header .me {
-  height: 150px;
-  width: 150px;
+  height: 135px;
+  width: 135px;
   border-radius: 100%;
   box-shadow: 0 4px 6px 2px lightGrey; }
+.bodyContainer .section.header .github {
+  width: 40px;
+  margin-right: 25px; }
+.bodyContainer .section.header .email {
+  width: 40px;
+  margin-right: 25px; }
+.bodyContainer .section.header .instagram {
+  width: 40px;
+  margin-left: 20px; }
 .bodyContainer .section.header .personalStatement {
   margin: auto;
   padding-left: 10%;
