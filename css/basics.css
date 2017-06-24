@@ -30,9 +30,21 @@ a {
   font-weight: 600;
   text-decoration: none; }
 
+.listOfTechnologies {
+  text-align: center; }
+  .listOfTechnologies .devicon {
+    width: 20%;
+    padding: 10px 10px; }
+    @media (min-width: 641px) {
+      .listOfTechnologies .devicon {
+        width: 15%;
+        padding: 15px 15px; } }
+    @media (min-width: 1025px) {
+      .listOfTechnologies .devicon {
+        width: 10%;
+        padding: 30px 30px; } }
+
 .section.grey {
-  height: 500px;
-  width: 100%;
   background-color: #efeded;
   clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%); }
 

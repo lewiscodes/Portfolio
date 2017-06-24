@@ -22,6 +22,17 @@
         margin-bottom: 20px;
       }
     }
+
+    &.technologies {
+      h2 {
+        padding-top: 40px;
+        text-align: center;
+      }
+
+      .listOfTechnologies {
+        padding-bottom: 40px;
+      }
+    }
   }
 }
 
