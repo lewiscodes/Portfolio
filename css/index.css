@@ -195,6 +195,13 @@ a {
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 20px; }
+.bodyContainer .section.header .contactDiv {
+  border: 2px solid white;
+  display: inline-block;
+  padding: 10px;
+  transition: border-color 0.5s; }
+  .bodyContainer .section.header .contactDiv.flash {
+    border-color: red; }
 .bodyContainer .section.technologies h2 {
   padding-top: 40px;
   text-align: center; }

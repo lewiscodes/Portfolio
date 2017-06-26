@@ -17,9 +17,13 @@ $(window).on("resize load", function() {
 });
 
 $(".contact").on("click tap", function() {
-  console.log("hello");
   event.preventDefault();
-  
+  if (window.location.href.indexOf("index.html") >= 0) {
+    window.location = "./index.html?contact=yes"
+  } else {
+    window.location = "../index.html?contact=yes"
+  }
+
 });
 
 function getDevice() {
