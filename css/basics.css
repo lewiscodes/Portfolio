@@ -25,6 +25,7 @@ p {
 
 a {
   color: #93ca44;
+  cursor: pointer;
   font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 600;

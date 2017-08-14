@@ -175,45 +175,39 @@ a {
 @media (min-width: 1025px) {
   body .navContainer .nav {
     margin-right: 100px; } }
-.bodyContainer .section .content {
-  text-align: center; }
-.bodyContainer .section.header .me {
-  height: 135px;
-  width: 135px;
-  border-radius: 100%;
-  box-shadow: 0 4px 6px 2px lightGrey; }
-.bodyContainer .section.header .github {
-  width: 40px;
-  margin-right: 25px; }
-.bodyContainer .section.header .email {
-  width: 40px;
-  margin-right: 25px; }
-.bodyContainer .section.header .instagram {
-  width: 40px;
-  margin-left: 20px; }
-.bodyContainer .section.header .personalStatement {
-  margin: auto;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-bottom: 20px; }
-.bodyContainer .section.header .contactDiv {
-  border: 2px solid white;
-  display: inline-block;
-  padding: 10px;
-  transition: border-color 0.5s; }
-  .bodyContainer .section.header .contactDiv.flash {
-    border-color: red; }
-.bodyContainer .section.technologies h2 {
-  padding-top: 40px;
-  text-align: center; }
-.bodyContainer .section.technologies .listOfTechnologies {
-  padding-bottom: 40px; }
+.content {
+  margin-left: 50px;
+  margin-right: 50px; }
+  .content h2, .content p {
+    text-align: justify; }
 
-@media (min-width: 641px) {
-  .bodyContainer .section.header .me {
-    height: 200px;
-    width: 200px; }
-  .bodyContainer .section.header .personalStatement {
-    width: 550px; } }
+.funfacts {
+  padding-top: 5px;
+  padding-bottom: 5px; }
 
-/*# sourceMappingURL=index.css.map */
+.lightboxBackground {
+  height: 100vh;
+  width: 100%;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  opacity: 0.8; }
+
+.einstein {
+  border-radius: 100px;
+  z-index: 30;
+  height: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); }
+
+@media (min-width: 1025px) {
+  .content {
+    margin-left: 50px;
+    margin-right: 200px; }
+    .content h2, .content p {
+      text-align: left; } }
+
+/*# sourceMappingURL=about.css.map */
