@@ -175,10 +175,40 @@ a {
 @media (min-width: 1025px) {
   body .navContainer .nav {
     margin-right: 100px; } }
+.slider .content {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
 .content {
   margin-left: 50px;
   margin-right: 50px; }
   .content h2, .content p {
     text-align: justify; }
+  .content .titleSlider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    overflow: auto;
+    justify-content: space-between;
+    padding-left: 0; }
+    .content .titleSlider .item {
+      padding: 10px 20px;
+      white-space: nowrap; }
+      .content .titleSlider .item h2 {
+        cursor: pointer; }
+        .content .titleSlider .item h2:hover {
+          color: #1abc9c; }
+
+@media (min-width: 641px) {
+  .slider {
+    width: 90%;
+    margin: auto; }
+
+  .content .titleSlider .item {
+    padding: 10px 50px; } }
+@media (min-width: 1025px) {
+  .slider {
+    width: 75%; } }
 
 /*# sourceMappingURL=blog.css.map */

@@ -1,10 +1,61 @@
 @import 'basics.scss';
 @import 'nav.scss';
 
+.slider {
+  .content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 .content {
   margin-left: 50px;
   margin-right: 50px;
   h2, p {
     text-align: justify;
+  }
+
+  .titleSlider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    overflow: auto;
+    justify-content: space-between;
+    padding-left: 0;
+
+    .item {
+      padding: 10px 20px;
+      white-space: nowrap;
+
+      h2 {
+        cursor: pointer;
+
+        &:hover {
+          color: $navBlue;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 641px) {
+  .slider {
+    width: 90%;
+    margin: auto;
+  }
+
+  .content {
+    .titleSlider {
+      .item {
+        padding: 10px 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .slider {
+    width: 75%;
   }
 }
