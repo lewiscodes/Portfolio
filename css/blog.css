@@ -200,6 +200,20 @@ a {
         .content .titleSlider .item h2:hover {
           color: #1abc9c; }
 
+.blogContent .content {
+  width: 80%;
+  margin: auto; }
+  .blogContent .content .contentSlider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    list-style-type: none;
+    padding: 0; }
+    .blogContent .content .contentSlider .blogItem {
+      min-width: 100%;
+      margin-right: 20px; }
+
 @media (min-width: 641px) {
   .slider {
     width: 90%;
@@ -209,6 +223,6 @@ a {
     padding: 10px 50px; } }
 @media (min-width: 1025px) {
   .slider {
-    width: 75%; } }
+    width: 80%; } }
 
 /*# sourceMappingURL=blog.css.map */

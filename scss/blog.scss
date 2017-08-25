@@ -39,6 +39,27 @@
   }
 }
 
+.blogContent {
+  .content {
+    width: 80%;
+    margin: auto;
+    
+    .contentSlider {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow: auto;
+      list-style-type: none;
+      padding: 0;
+      
+      .blogItem {
+        min-width: 100%;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
 @media (min-width: 641px) {
   .slider {
     width: 90%;
@@ -56,6 +77,6 @@
 
 @media (min-width: 1025px) {
   .slider {
-    width: 75%;
+    width: 80%;
   }
 }

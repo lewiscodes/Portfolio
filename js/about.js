@@ -1,4 +1,4 @@
-$(".openLightbox").on("click tap", function(e) {
+$(".openLightbox").on("mouseover tap", function(e) {
   e.preventDefault();
   displayLightbox();
 });
