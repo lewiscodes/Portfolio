@@ -8,6 +8,31 @@
   }
 }
 
+.sliderChevrons {
+  text-align: center;
+
+  .leftChevron {
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+
+    &:hover {
+      background-color: $navBlue;
+    }
+  }
+
+  .rightChevron {
+    height: 50px;
+    transform: rotate(180deg);
+    border-radius: 100%;
+    margin-left: 10px;
+
+    &:hover {
+      background-color: $navBlue;
+    }
+  }
+}
+
 .content {
   margin-left: 50px;
   margin-right: 50px;
@@ -28,6 +53,12 @@
       padding: 10px 20px;
       white-space: nowrap;
 
+      &.selected {
+        h2 {
+          color: $navBlue;
+        }
+      }
+
       h2 {
         cursor: pointer;
 
@@ -43,7 +74,7 @@
   .content {
     width: 80%;
     margin: auto;
-    
+
     .contentSlider {
       display: flex;
       flex-direction: row;
@@ -51,7 +82,7 @@
       overflow: auto;
       list-style-type: none;
       padding: 0;
-      
+
       .blogItem {
         min-width: 100%;
         margin-right: 20px;

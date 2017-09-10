@@ -179,6 +179,22 @@ a {
   margin-left: 0 !important;
   margin-right: 0 !important; }
 
+.sliderChevrons {
+  text-align: center; }
+  .sliderChevrons .leftChevron {
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px; }
+    .sliderChevrons .leftChevron:hover {
+      background-color: #1abc9c; }
+  .sliderChevrons .rightChevron {
+    height: 50px;
+    transform: rotate(180deg);
+    border-radius: 100%;
+    margin-left: 10px; }
+    .sliderChevrons .rightChevron:hover {
+      background-color: #1abc9c; }
+
 .content {
   margin-left: 50px;
   margin-right: 50px; }
@@ -195,6 +211,8 @@ a {
     .content .titleSlider .item {
       padding: 10px 20px;
       white-space: nowrap; }
+      .content .titleSlider .item.selected h2 {
+        color: #1abc9c; }
       .content .titleSlider .item h2 {
         cursor: pointer; }
         .content .titleSlider .item h2:hover {
