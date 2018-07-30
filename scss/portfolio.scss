@@ -1,0 +1,29 @@
+@import 'basics.scss';
+@import 'nav.scss';
+
+.bodyContainer {
+  .section {
+    h2 {
+      display: inline-block;
+    }
+
+    .github {
+      width: 30px;
+      margin-left: 15px;
+      vertical-align: middle;
+    }
+
+    .www {
+      width: 30px;
+      margin-left: 15px;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+@media (min-width: 641px) {
+  .section {
+    
+  }
+}
