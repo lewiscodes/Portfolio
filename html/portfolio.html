@@ -36,11 +36,28 @@
       </ul>
     </div>
     <div class="bodyContainer">
-    <div class="section white header something2Watch">
+      <div class="section white header something2Watch">
         <div class="content">
+          <h1>do this in an accordian!</h1>
           <h2>Something2Watch</h2>
           <a href="http://www.something2watch.com" target="_blank"><img src="../img/www.svg" class="github"/></a>
           <a href="https://github.com/lewjt/something2Watch" target="_blank"><img src="../img/devicons/github-original-wordmark.svg" class="github"/></a>
+          <div>
+            <img src="../img/devicons/react-original-wordmark.svg" class="github"/>
+            <img src="../img/devicons/javascript-original.svg" class="github"/>
+            <img src="../img/devicons/css3-original-wordmark.svg" class="github"/>
+          </div>
+        </div>
+        <div>
+          <h3>Idea</h3>
+          <p>I came up with this idea through personal necessity. I love watching tv, but so often its tough to find something good to watch. There are lots of similar sites out there, but they all seemed overly complicated; asking specifics about genere or certificate (amongst a myriad of other things). My idea is nice and simple; what is something you've enjoyed before? Here are some similar shows to choose from!</p>
+          <h3>Designs</h3>
+          <p>I had a good idea in my mind of how I wanted the site to look. I design and make all sites that I work on using the 'mobile first' methodology; but this site more than most, I knew  would get of traffic from mobile and tablet (most people sat on their sofa wondering what to watch tend to have their phone or tablet to hand!). I fleshed out some wireframes and user flow (<a href='../img/something2watch/Something2Watch_small.pdf' target="_">small</a>, <a href='../img/something2watch/Something2Watch_medium.pdf' target="_">medium</a> and <a href='../img/something2watch/Something2Watch_large.pdf' target="_">large</a>) in Balsamiq and decided on the font and colour with inspiration from a recent copy of Web Designer magazine.</p>
+          <h3>Challenges</h3>
+          <p>The biggest challenge was finding the right API to get the data. In the end, I wasn't able to find a single data source that gave me everything I wanted; <a href="https://developers.themoviedb.org/3" target="_">themoviedb</a> came close; it provided a comprehensive query endpoint to find suggestions using any number of different metrics, but the one downside was that it used it's own rating system, rather than the more farmiliar (and much more widely used) IMDB and Rotten Tomatoes, so I ended up using <a href="http://www.omdbapi.com/" target"_">omdbapi</a> for the basic search and most of the UI data (as well as that important sort by rating), but fell back on themoviedb for the impressive search api.</p>
+          <p>The second challege came with getting the data out of the api's. Because of the need to switch between the two api's to retrieve and display the results, there are 5 asyncronus api calls, that all depend on the previous in order to work. Initially i tried doing this in the redux container; checking that the previous API had returned it's result using componentWillReceiveProps and firing off the next call when it had; but that got very messy very fast; so instead I decided on chaining promises in the action creator instead. I felt this was the best all round solution as it keeps the container nice and concise whilst still not having an overly complicated action.</p>
+          <h3>Further Development Ideas</h3>
+          <p>This one is easy, if I can find an API that provides the data, I would love to be able to show which platforms each result is available on; whether it be Netflix, Amazon Prime, iPlayer, etc...</p>
         </div>
       </div>
       <div class="section grey ifOnly">
@@ -48,42 +65,81 @@
           <h2>IfOnly</h2>
           <a href="http://www.ifonly.xyz" target="_blank"><img src="../img/www.svg" class="github"/></a>
           <a href="https://github.com/lewjt/IfOnly" target="_blank"><img src="../img/devicons/github-original-wordmark.svg" class="github"/></a>
+          <div>
+            <img src="../img/devicons/html5-original-wordmark.svg" class="github"/>
+            <img src="../img/devicons/css3-original-wordmark.svg" class="github"/>
+            <img src="../img/devicons/sass-original.svg" class="github"/>
+            <img src="../img/devicons/jquery-original-wordmark.svg" class="github"/>
+          </div>
+        </div>
+        <div>
+            <h3>Idea</h3>
+            <p>I came up with the idea for this site when chatting to a friend; "I wonder, if someone had invested some money in Apple for me on the day I was born, what would it be worth now?". It turns out, it would be worth about 150 times more today than it was then.</p>
+            <h3>Designs</h3>
+            <p>I think I spent more time thinking about how to make this idea fun for the end user, rather than the actual design of it; and honestly? I think that shows. I am very pleased with the story telling aspect of it though.</p>
+            <h3>Challenges</h3>
+            <p>The hardest part of this was the time spend on getting the inputs to work how I wanted them to. They grow and shrink to fit the text that the user adds; they are responsive across different viewports; utilising mobile and tablet devices native datetime pickers, and a jQuery plugin to achieve the same thing on desktop.</p>
+            <p>I also took care when it came to loading the background image. There are 5 potential images that can be used, the site randomises which one is displayed each time the page is loaded. The image is then loaded asyncronously and fades in when it has finished downloading. It's turns out to be a fairly simple bit of javascript, but it took a decent amount of thought!</p>
+            <h3>Further Development Ideas</h3>
+            <p>I've already done a bit of further development; I added the bottom section, calculation when would have been the best possible day for me to ahve cashed out! I also added the UK FTSE100 stock exchange, to go wiht the existing US S&P500. I do still have a couple of ideas though; I would definitely like to redesign the UI to use more material design aspects(I've never been totlly happy with it, especially the loading spinner!). I would also like to add CryptoCUrrencies to the list of available investments.</p>
         </div>
       </div>
       <div class="section white studentbeans">
           <div class="content">
             <h2>StudentBeans</h2>
             <a href="http://www.studentbeans.com" target="_blank"><img src="../img/www.svg" class="github"/></a>
+            <div>
+                <img src="../img/devicons/react-original-wordmark.svg" class="github"/>
+                <img src="../img/devicons/nodejs-original-wordmark.svg" class="github"/>
+            </div>
           </div>
         </div>
       <div class="section grey JLRCustomerPortal">
         <div class="content">
           <h2>Jaguar & Land Rover Customer Portal</h2>
+          <div>
+              <img src="../img/devicons/react-original-wordmark.svg" class="github"/>
+              <img src="../img/devicons/nodejs-original-wordmark.svg" class="github"/>
+          </div>
         </div>
       </div>
       <div class="section white JLRConfig">
         <div class="content">
           <h2>Jaguar & Land Rover Configurator</h2>
           <a href="https://buildyour.landrover.com/lr2/r/model/_/en_gb/l560/3kgxn" target="_blank"><img src="../img/www.svg" class="github"/></a>
+          <div>
+              <img src="../img/devicons/react-original-wordmark.svg" class="github"/>
+              <img src="../img/devicons/nodejs-original-wordmark.svg" class="github"/>
+          </div>
         </div>
       </div>
       <div class="section grey JLRDX">
         <div class="content">
           <h2>Jaguar & Land Rover DX</h2>
           <a href="https://www.landrover.co.uk/index.html" target="_blank"><img src="../img/www.svg" class="github"/></a>
+          <div>
+            <img src="../img/devicons/html5-original-wordmark.svg" class="github"/>
+            <img src="../img/devicons/css3-original-wordmark.svg" class="github"/>
+            <img src="../img/devicons/sass-original.svg" class="github"/>
+            <img src="../img/devicons/jquery-original-wordmark.svg" class="github"/>
+          </div>
         </div>
       </div>
-      <div class="section white portfolio">
-        <div class="content">
-          <h2>Portfolio</h2>
-          <a href="../index.html" target="_blank"><img src="../img/www.svg" class="github"/></a>
-          <a href="https://github.com/lewjt/Portfolio" target="_blank"><img src="../img/devicons/github-original-wordmark.svg" class="github"/></a>
-        </div>
-      </div>
-      <div class="section grey wallpaper">
+      <div class="section white wallpaper">
         <div class="content">
           <h2>Wallpapers</h2>
           <a href="https://github.com/lewjt/Wallpapers" target="_blank"><img src="../img/devicons/github-original-wordmark.svg" class="github"/></a>
+          <div>
+              <img src="../img/devicons/nodejs-original-wordmark.svg" class="github"/>
+          </div>
+        </div>
+        <div>
+            <h3>Idea</h3>
+            <p>I love having colorful and interesting wallpapers on my mac! So I decided to make a little app that would allow me to download the current trending images in the <a href="https://www.reddit.com/r/EarthPorn/" target="_">EarthPorn</a> sub-reddit on Reddit. I then setup my mac to cycle through the images changing my wallpaper every 30 minutes!</p>
+            <h3>Challenges</h3>
+            <p>There wasn't any massivley challenging aspects to this. Probably the biggest headache was working with the notoriously fiddley file system implimentation in nodeJS.</p>
+            <h3>Further Development Ideas</h3>
+            <p>I have already implimented a settings file so that the user can easily configure things such as which subReddit to get the images from, where the downloaded images should be saved and the minimum image dimensions that should be allowed. If I was to develop it further, I would like to investigate a way of automatically setting the downloaded images as the wallpaper, rather than using the built in mac display settings tool; and have the app run periodically automatically, rather than having to manually set it as a scheduled task.</p>
         </div>
       </div>
     </div>
