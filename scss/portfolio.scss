@@ -27,23 +27,25 @@
         display: inline-block;
       }
   
-      .github {
+      .github, .www {
         width: 30px;
         margin-left: 15px;
-        margin-bottom: 0.83em;
         vertical-align: middle;
       }
-  
-      .www {
+
+      .devicons {
         width: 30px;
         margin-left: 15px;
         vertical-align: middle;
+        margin-bottom: 0.83em;
       }
   
       .project_header {
+        margin-top: 0.83em;
+        margin-right: 0.83em;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
         flex-grow: 1;
   
         .project_header_content {

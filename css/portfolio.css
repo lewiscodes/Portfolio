@@ -7,8 +7,11 @@ h1 {
 h2 {
   color: #2c3e50;
   font-family: "Lato", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300; }
+  @media (min-width: 641px) {
+    h2 {
+      font-size: 24px; } }
 
 h3 {
   color: #2c3e50;
@@ -191,19 +194,21 @@ a {
         background-color: green; }
     .bodyContainer .section .header-container h2 {
       display: inline-block; }
-    .bodyContainer .section .header-container .github {
-      width: 30px;
-      margin-left: 15px;
-      margin-bottom: 0.83em;
-      vertical-align: middle; }
-    .bodyContainer .section .header-container .www {
+    .bodyContainer .section .header-container .github, .bodyContainer .section .header-container .www {
       width: 30px;
       margin-left: 15px;
       vertical-align: middle; }
+    .bodyContainer .section .header-container .devicons {
+      width: 30px;
+      margin-left: 15px;
+      vertical-align: middle;
+      margin-bottom: 0.83em; }
     .bodyContainer .section .header-container .project_header {
+      margin-top: 0.83em;
+      margin-right: 0.83em;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-end;
       flex-grow: 1; }
       .bodyContainer .section .header-container .project_header .project_header_content {
         text-align: center; }

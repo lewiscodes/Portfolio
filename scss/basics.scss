@@ -19,8 +19,12 @@ h1 {
 h2 {
   color: $black;
   font-family: $headerFont, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
+
+  @media (min-width: 641px) {
+    font-size: 24px;
+  }
 }
 
 h3 {
