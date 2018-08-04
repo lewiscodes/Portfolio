@@ -7,13 +7,16 @@ $('.accordion_button').on("click tap", function() {
     $(this).addClass("open");
   }
 
-  var content = $(this).closest(".project_header").next();
+  var content = $(this).parent().next();
+  var section = $(this).parent().parent();
 
   if (content.hasClass("open")) {
-    content.removeClass("open")
-    content.addClass("closed")
+    content.removeClass("open");
+    content.addClass("closed");
+    section.css("padding", "0 0");
   } else {
-    content.removeClass("closed")
-    content.addClass("open")
+    content.removeClass("closed");
+    content.addClass("open");
+    section.css("padding", "50px 0");
   }
 })

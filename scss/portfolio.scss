@@ -3,53 +3,57 @@
 
 .bodyContainer {
   .section {
+    transition: padding 0.3s linear;
 
-    &.grey {
-      padding: 50px 0;
-    }
-
-    .accordion_button {
-      height: 25px;
-      width: 25px;
-
-      &.closed {
-        background-color: red;
-      }
-
-      &.open {
-        background-color: green;
-      }
-    }
-
-    h2 {
-      display: inline-block;
-    }
-
-    .github {
-      width: 30px;
-      margin-left: 15px;
-      margin-bottom: 0.83em;
-      vertical-align: middle;
-    }
-
-    .www {
-      width: 30px;
-      margin-left: 15px;
-      vertical-align: middle;
-    }
-
-    .project_header {
+    .header-container {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      .accordion_button {
+        height: 25px;
+        width: 25px;
+        margin-left: 0.83em;
+        flex-grow: 0;
+        align-self: center;
+  
+        &.closed {
+          background-color: red;
+        }
+  
+        &.open {
+          background-color: green;
+        }
+      }
 
-      .project_header_content {
-        text-align: center;
+      h2 {
+        display: inline-block;
+      }
+  
+      .github {
+        width: 30px;
+        margin-left: 15px;
+        margin-bottom: 0.83em;
+        vertical-align: middle;
+      }
+  
+      .www {
+        width: 30px;
+        margin-left: 15px;
+        vertical-align: middle;
+      }
+  
+      .project_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+  
+        .project_header_content {
+          text-align: center;
+        }
       }
     }
 
     .project_content {
-      transition: max-height 1s linear;
+      transition: max-height 0.3s linear;
       overflow: hidden;
 
       &.closed {
@@ -57,7 +61,7 @@
       }
 
       &.open {
-        max-height: 2000px;
+        max-height: 1000px;
       }
     }
   }
@@ -67,10 +71,12 @@
 @media (min-width: 641px) {
   .bodyContainer {
     .section {
-      .project_header {
-        margin: 0 0.83em;
-        flex-direction: row;
-        justify-content: space-between;
+      .header-container {
+        .project_header {
+          margin: 0 0.83em;
+          flex-direction: row;
+          justify-content: space-between;
+        }
       }
 
       .project_content {
