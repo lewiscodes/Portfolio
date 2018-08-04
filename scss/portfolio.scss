@@ -75,6 +75,8 @@
     .project_content {
       transition: max-height 0.3s linear;
       overflow: hidden;
+      margin-left: 0.83em;
+      margin-right: 0.83em;
 
       &.closed {
         max-height: 0;

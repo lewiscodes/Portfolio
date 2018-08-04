@@ -226,7 +226,9 @@ a {
         text-align: center; }
   .bodyContainer .section .project_content {
     transition: max-height 0.3s linear;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-left: 0.83em;
+    margin-right: 0.83em; }
     .bodyContainer .section .project_content.closed {
       max-height: 0; }
     .bodyContainer .section .project_content.open {
