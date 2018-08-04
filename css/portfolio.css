@@ -187,11 +187,23 @@ a {
       width: 25px;
       margin-left: 0.83em;
       flex-grow: 0;
-      align-self: center; }
-      .bodyContainer .section .header-container .accordion_button.closed {
-        background-color: red; }
-      .bodyContainer .section .header-container .accordion_button.open {
-        background-color: green; }
+      align-self: center;
+      cursor: pointer; }
+      .bodyContainer .section .header-container .accordion_button .acc_one, .bodyContainer .section .header-container .accordion_button .acc_two {
+        position: absolute;
+        border-radius: 100px;
+        background-color: black;
+        transition: transform 0.3s ease-out; }
+      .bodyContainer .section .header-container .accordion_button .acc_one {
+        height: 5px;
+        width: 25px;
+        transform: rotate(360deg) translate(0px, 10px); }
+      .bodyContainer .section .header-container .accordion_button .acc_two {
+        height: 25px;
+        width: 5px;
+        transform: translate(10px, 0px); }
+      .bodyContainer .section .header-container .accordion_button.open .acc_two {
+        transform: rotate(90deg) translate(0px, -10px); }
     .bodyContainer .section .header-container h2 {
       display: inline-block; }
     .bodyContainer .section .header-container .github, .bodyContainer .section .header-container .www {

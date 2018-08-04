@@ -1,14 +1,16 @@
-$('.accordion_button').on("click tap", function() {
-  if ($(this).hasClass("open")) {
-    $(this).removeClass("open");
-    $(this).addClass("closed");
+$('.header-container').on("click tap", function() {
+  var accordionButton = $(this).children().first();
+
+  if ($(accordionButton).hasClass("open")) {
+    $(accordionButton).removeClass("open");
+    $(accordionButton).addClass("closed");
   } else {
-    $(this).removeClass("closed");
-    $(this).addClass("open");
+    $(accordionButton).removeClass("closed");
+    $(accordionButton).addClass("open");
   }
 
-  var content = $(this).parent().next();
-  var section = $(this).parent().parent();
+  var content = $(this).next();
+  var section = $(this).parent();
 
   if (content.hasClass("open")) {
     content.removeClass("open");
