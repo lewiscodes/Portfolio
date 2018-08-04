@@ -232,7 +232,7 @@ a {
     .bodyContainer .section .project_content.closed {
       max-height: 0; }
     .bodyContainer .section .project_content.open {
-      max-height: 1000px; }
+      max-height: 1600px; }
 
 @media (min-width: 641px) {
   .bodyContainer .section .header-container .project_header {
