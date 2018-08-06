@@ -18,7 +18,7 @@
         .acc_one, .acc_two {
           position: absolute;
           border-radius: 100px;
-          background-color: black;
+          background-color: $black;
           transition: transform 0.3s ease-out;
         }
 
