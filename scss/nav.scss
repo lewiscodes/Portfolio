@@ -205,14 +205,3 @@ $navBlue: #1abc9c;
     }
   }
 }
-
-// desktop
-@media (min-width: 1025px) {
-  body {
-    .navContainer {
-      .nav {
-        margin-right: 100px;
-      }
-    }
-  }
-}

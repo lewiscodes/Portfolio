@@ -1,76 +1,77 @@
-$(window).on("scroll", function() {
-  if (getDevice() !== "mobile") {
-    animateNav();
-  }
-});
+var $ = window.$
 
-$(window).on("resize load", function() {
-  var device = getDevice();
+$(window).on('scroll', function () {
+  if (getDevice() !== 'mobile') {
+    animateNav()
+  }
+})
+
+$(window).on('resize load', function () {
+  var device = getDevice()
   if (device === 'mobile') {
-    closeMobileNav();
-    handleMobileNav();
+    closeMobileNav()
+    handleMobileNav()
   } else if (device === 'tablet') {
-    closeMobileNav();
+    closeMobileNav()
   } else {
-    closeMobileNav();
+    closeMobileNav()
   }
-});
+})
 
-$(".contact").on("click tap", function() {
-  event.preventDefault();
-  if (window.location.href.indexOf("index.html") >= 0) {
-    window.location = "./index.html?contact=yes"
+$('.contact').on('click tap', function () {
+  window.event.preventDefault()
+  if (window.location.href.indexOf('index.html') >= 0) {
+    window.location = './index.html?contact=yes'
   } else {
-    window.location = "../index.html?contact=yes"
+    window.location = '../index.html?contact=yes'
   }
+})
 
-});
-
-function getDevice() {
-  var width = $(window).width();
+function getDevice () {
+  var width = $(window).width()
   if (width <= 640) {
-    return "mobile";
+    return 'mobile'
   } else if (width > 640 && width <= 1024) {
-    return "tablet";
+    return 'tablet'
   } else {
-    return "desktop";
+    return 'desktop'
   }
 }
 
 function animateNav () {
-  var scrollPosition = $(document).scrollTop();
+  var scrollPosition = $(document).scrollTop()
 
   if (scrollPosition < 20) {
-    $(".nav").removeClass("notTop");
+    $('.nav').removeClass('notTop')
   } else {
-    $(".nav").addClass("notTop");
+    $('.nav').addClass('notTop')
   }
 }
 
-function handleMobileNav() {
-  $(".mobileNavButton").on("click tap", function() {
-    if ($(".mobileNavButton").hasClass("open")) {
-      closeMobileNav();
+function handleMobileNav () {
+  $('.mobileNavButton').on('click tap', function () {
+    if ($('.mobileNavButton').hasClass('open')) {
+      closeMobileNav()
     } else {
-      openMobileNav();
+      openMobileNav()
     }
   })
 }
 
-function openMobileNav() {
-  $(".mobileNavButton").removeClass("closed");
-  $(".mobileNavButton").addClass("open");
-  $(".mobileNavWrapper").removeClass("closed");
-  $(".mobileNavWrapper").addClass("open");
-  $(".bodyContainer").removeClass("closed");
-  $(".bodyContainer").addClass("open");
+function openMobileNav () {
+  $('.mobileNavButton').removeClass('closed')
+  $('.mobileNavButton').addClass('open')
+  $('.mobileNavWrapper').removeClass('closed')
+  $('.mobileNavWrapper').addClass('open')
+  $('.bodyContainer').removeClass('closed')
+  $('.bodyContainer').addClass('open')
 }
 
-function closeMobileNav() {
-  $(".mobileNavButton").removeClass("open");
-  $(".mobileNavButton").addClass("closed");
-  $(".mobileNavWrapper").removeClass("open");
-  $(".mobileNavWrapper").addClass("closed");
-  $(".bodyContainer").removeClass("open");
-  $(".bodyContainer").addClass("closed");
+function closeMobileNav () {
+  $('.mobileNavButton').removeClass('open')
+  $('.mobileNavButton').addClass('closed')
+  $('.mobileNavWrapper').removeClass('open')
+  $('.mobileNavWrapper').addClass('closed')
+  $('.bodyContainer').removeClass('open')
+  $('.bodyContainer').addClass('closed')
 }
