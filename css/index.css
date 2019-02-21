@@ -256,6 +256,25 @@ a {
 .bodyContainer .section.technologies .listOfTechnologies {
   padding-bottom: 40px;
 }
+.bodyContainer .slider {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.bodyContainer .slider ul {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+.bodyContainer .slider .slide {
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 @media (min-width: 641px) {
   .bodyContainer .section.header .me {
