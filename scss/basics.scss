@@ -1,10 +1,11 @@
 // sass --watch scss:css
 
-$white: #000000;
 $lightGrey: #efeded;
 $darkGrey: #474747;
 $black: #2c3e50;
 $green: #93ca44;
+$navGrey: #a1b1bc;
+$navBlue: #1abc9c;
 
 $headerFont: "Lato";
 
@@ -14,13 +15,11 @@ $headerFont: "Lato";
 
 h1 {
   color: $black;
-  font-size: 34px;
   font-weight: 300;
 }
 
 h2 {
   color: $black;
-  font-size: 18px;
   font-weight: 300;
 
   @media (min-width: 641px) {
@@ -30,23 +29,24 @@ h2 {
 
 h3 {
   color: $black;
-  font-size: 20px;
   font-weight: 300;
 }
 
 p {
   color: $darkGrey;
-  font-size: 16px;
   font-weight: 300;
   line-height: 28px;
 }
 
 a {
-  color: $green;
+  color: $navGrey;
   cursor: pointer;
-  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
+
+  &:hover {
+    color: $navBlue;
+  }
 }
 
 .listOfTechnologies {

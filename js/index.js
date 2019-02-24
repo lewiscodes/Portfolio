@@ -6,12 +6,81 @@ var slideHeight = null
 var sliderFullWidth = null
 
 $(document).ready(function () {
+  $(window).on('scroll', function () {
+    if (getDevice() !== 'mobile') {
+      animateNav()
+    }
+  })
+  
+  $(window).on('resize load', function () {
+    var device = getDevice()
+    if (device === 'mobile') {
+      closeMobileNav()
+      handleMobileNav()
+    } else if (device === 'tablet') {
+      closeMobileNav()
+    } else {
+      closeMobileNav()
+    }
+  })
+  
+  function getDevice () {
+    var width = $(window).width()
+    if (width <= 640) {
+      return 'mobile'
+    } else if (width > 640 && width <= 1024) {
+      return 'tablet'
+    } else {
+      return 'desktop'
+    }
+  }
+  
+  function animateNav () {
+    var scrollPosition = $(document).scrollTop()
+  
+    if (scrollPosition < 20) {
+      $('.nav').removeClass('notTop')
+    } else {
+      $('.nav').addClass('notTop')
+    }
+  }
+  
+  function handleMobileNav () {
+    $('.mobileNavButton').on('click tap', function () {
+      if ($('.mobileNavButton').hasClass('open')) {
+        closeMobileNav()
+      } else {
+        openMobileNav()
+      }
+    })
+  }
+  
+  function openMobileNav () {
+    $('.mobileNavButton').removeClass('closed')
+    $('.mobileNavButton').addClass('open')
+    $('.mobileNavWrapper').removeClass('closed')
+    $('.mobileNavWrapper').addClass('open')
+    $('.bodyContainer').removeClass('closed')
+    $('.bodyContainer').addClass('open')
+  }
+  
+  function closeMobileNav () {
+    $('.mobileNavButton').removeClass('open')
+    $('.mobileNavButton').addClass('closed')
+    $('.mobileNavWrapper').removeClass('open')
+    $('.mobileNavWrapper').addClass('closed')
+    $('.bodyContainer').removeClass('open')
+    $('.bodyContainer').addClass('closed')
+  }
+
   $('.name').on('click tap', function () {
     $('html, body').animate({ scrollTop: 0 }, 750)
     return false
   })
 
   $('.work').on('click tap', function () {
+    closeMobileNav()
+    
     var target = $('.section.work').offset()
     target.top = target.top - 50
     

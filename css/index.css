@@ -4,13 +4,11 @@
 
 h1 {
   color: #2c3e50;
-  font-size: 34px;
   font-weight: 300;
 }
 
 h2 {
   color: #2c3e50;
-  font-size: 18px;
   font-weight: 300;
 }
 @media (min-width: 641px) {
@@ -21,23 +19,23 @@ h2 {
 
 h3 {
   color: #2c3e50;
-  font-size: 20px;
   font-weight: 300;
 }
 
 p {
   color: #474747;
-  font-size: 16px;
   font-weight: 300;
   line-height: 28px;
 }
 
 a {
-  color: #93ca44;
+  color: #a1b1bc;
   cursor: pointer;
-  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
+}
+a:hover {
+  color: #1abc9c;
 }
 
 .listOfTechnologies {
@@ -231,18 +229,6 @@ a {
   border-radius: 100%;
   box-shadow: 0 4px 6px 2px lightGrey;
 }
-.bodyContainer .section.header .github {
-  width: 40px;
-  margin-right: 25px;
-}
-.bodyContainer .section.header .email {
-  width: 40px;
-  margin-right: 25px;
-}
-.bodyContainer .section.header .instagram {
-  width: 40px;
-  margin-left: 20px;
-}
 .bodyContainer .section.header .personalStatement {
   margin: auto;
   padding-left: 10%;
@@ -271,33 +257,38 @@ a {
 }
 .bodyContainer .slider .slide .slideContent {
   text-align: justify;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 .bodyContainer .slider .slide .slideContent .titleBar {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.bodyContainer .slider .slide .slideContent .titleBar .title {
-  display: flex;
-  flex-grow: 1;
+.bodyContainer .slider .slide .slideContent .titleBar h2 {
+  text-align: center;
 }
-.bodyContainer .slider .slide .slideContent .titleBar .title :first-child {
-  margin-right: 12px;
+.bodyContainer .slider .slide .slideContent .titleBar .links {
+  margin-bottom: 24px;
 }
-.bodyContainer .slider .slide .slideContent .titleBar .title a {
-  align-self: center;
-  margin-left: 12px;
+.bodyContainer .slider .slide .slideContent .titleBar .links a {
   color: #474747;
+  margin-left: 12px;
 }
-.bodyContainer .slider .slide .slideContent .titleBar .title a:hover {
+.bodyContainer .slider .slide .slideContent .titleBar .links a:first-child {
+  margin-left: 0;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .links a:hover {
   color: #1abc9c;
 }
 .bodyContainer .slider .slide .slideContent .titleBar .tech {
   color: #474747;
-  align-self: center;
 }
 .bodyContainer .slider .slide .slideContent .titleBar .tech i {
   margin-left: 12px;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .tech i:first-child {
+  margin-left: 0;
 }
 .bodyContainer .slider .controlBar {
   display: flex;
@@ -310,13 +301,13 @@ a {
   color: #1abc9c;
 }
 .bodyContainer .slider .controlBar a.control_prev {
-  margin-left: 10%;
+  margin-left: 3%;
 }
 .bodyContainer .slider .controlBar a.control_prev i {
   transform: rotate(180deg);
 }
 .bodyContainer .slider .controlBar a.control_next {
-  margin-right: 10%;
+  margin-right: 3%;
 }
 .bodyContainer .slider .controlBar .dots {
   display: flex;
@@ -352,6 +343,24 @@ a {
   }
   .bodyContainer .section.header .personalStatement {
     width: 550px;
+  }
+  .bodyContainer .section .slider .slide .slideContent {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .bodyContainer .section .slider .slide .slideContent .titleBar {
+    flex-direction: row;
+  }
+  .bodyContainer .section .slider .slide .slideContent .titleBar .links {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-left: 24px;
+  }
+  .bodyContainer .section .controlBar a.control_prev {
+    margin-left: 10%;
+  }
+  .bodyContainer .section .controlBar a.control_next {
+    margin-right: 10%;
   }
 }
 
