@@ -274,6 +274,31 @@ a {
   padding-left: 10%;
   padding-right: 10%;
 }
+.bodyContainer .slider .slide .slideContent .titleBar {
+  display: flex;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .title {
+  display: flex;
+  flex-grow: 1;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .title :first-child {
+  margin-right: 12px;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .title a {
+  align-self: center;
+  margin-left: 12px;
+  color: #474747;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .title a:hover {
+  color: #1abc9c;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .tech {
+  color: #474747;
+  align-self: center;
+}
+.bodyContainer .slider .slide .slideContent .titleBar .tech i {
+  margin-left: 12px;
+}
 .bodyContainer .slider .controlBar {
   display: flex;
   justify-content: space-between;

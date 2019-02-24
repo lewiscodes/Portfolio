@@ -67,7 +67,39 @@
       .slideContent {
         text-align: justify;
         padding-left: 10%;
-        padding-right: 10%; 
+        padding-right: 10%;
+
+        .titleBar {
+          display: flex;
+
+          .title {
+            display: flex;
+            flex-grow: 1;
+  
+            :first-child {
+              margin-right: 12px;
+            }
+  
+            a {
+              align-self: center;
+              margin-left: 12px;
+              color: $darkGrey;
+        
+              &:hover {
+                color: $navBlue;
+              }
+            }
+          }
+
+          .tech {
+            color: $darkGrey;
+            align-self: center;
+
+            i {
+              margin-left: 12px;
+            }
+          }
+        }
       }
     }
 
