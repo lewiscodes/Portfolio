@@ -63,6 +63,61 @@
 
     .slide {
       float: left;
+
+      .slideContent {
+        text-align: justify;
+        padding-left: 10%;
+        padding-right: 10%; 
+      }
+    }
+
+    .controlBar {
+      display: flex;
+      justify-content: space-between;
+
+      a.control_prev, a.control_next {
+        color: $navGrey;
+      
+        &:hover {
+          color: $navBlue;
+        }
+      }
+      
+      a.control_prev {
+        margin-left: 10%;
+
+        i {
+          transform: rotate(180deg);
+        }
+      }
+
+      a.control_next {
+        margin-right: 10%;
+      }
+
+      .dots {
+        display: flex;
+
+        .dot {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: $navGrey;
+          border-radius: 50%;
+          margin-left: 18px;
+          align-self: center;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &.selected {
+            background-color: $navBlue;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
     }
   }
 }

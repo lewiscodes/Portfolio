@@ -269,6 +269,50 @@ a {
 .bodyContainer .slider .slide {
   float: left;
 }
+.bodyContainer .slider .slide .slideContent {
+  text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.bodyContainer .slider .controlBar {
+  display: flex;
+  justify-content: space-between;
+}
+.bodyContainer .slider .controlBar a.control_prev, .bodyContainer .slider .controlBar a.control_next {
+  color: #a1b1bc;
+}
+.bodyContainer .slider .controlBar a.control_prev:hover, .bodyContainer .slider .controlBar a.control_next:hover {
+  color: #1abc9c;
+}
+.bodyContainer .slider .controlBar a.control_prev {
+  margin-left: 10%;
+}
+.bodyContainer .slider .controlBar a.control_prev i {
+  transform: rotate(180deg);
+}
+.bodyContainer .slider .controlBar a.control_next {
+  margin-right: 10%;
+}
+.bodyContainer .slider .controlBar .dots {
+  display: flex;
+}
+.bodyContainer .slider .controlBar .dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #a1b1bc;
+  border-radius: 50%;
+  margin-left: 18px;
+  align-self: center;
+}
+.bodyContainer .slider .controlBar .dots .dot:first-child {
+  margin-left: 0;
+}
+.bodyContainer .slider .controlBar .dots .dot.selected {
+  background-color: #1abc9c;
+  width: 16px;
+  height: 16px;
+}
 
 .clearfix::after {
   content: "";

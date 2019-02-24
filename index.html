@@ -32,7 +32,7 @@
     <div class="navContainer">
       <ul class="nav">
         <li class="name"><a>Lewis Turner</a></li>
-        <li><a href="./html/portfolio.html">Work</a></li>
+        <li><a class="work" href="javascript:void(0)">Work</a></li>
         <li><a href="CV.pdf" target="_blank">CV</a></li>
         <li><a href="mailto:lewis@lewiscodes.com" target="_blank"><i class="fas fa-at"></i></a></li>
         <li><a href="https://github.com/lewiscodes" target="_blank"><i class="fab fa-github"></i></a></li>
@@ -65,15 +65,25 @@
           </div>
         </div>
       </div>
-      <div class="section white">
+      <div class="section white work">
         <div class="content" style="height: 100vh">
           <h2>Work</h2>
           <div class="slider">
-              <a href="javascript:void(0)" class="control_prev"><</a>
-            <a href="javascript:void(0)" class="control_next">></a>
-            <ul>
+            <div class="controlBar">
+              <a href="javascript:void(0)" class="control_prev"><i class="fas fa-arrow-circle-right fa-3x"></i></a>
+              <div class="dots">
+                <span class="dot dot1 selected"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+                <span class="dot dot4"></span>
+                <span class="dot dot5"></span>
+                <span class="dot dot6"></span>
+              </div>
+              <a href="javascript:void(0)" class="control_next"><i class="fas fa-arrow-circle-right fa-3x"></i></a>
+            </div>
+            <ul class="clearfix">
               <li class="slide slide1">
-                <div>
+                <div class="slideContent">
                   <h2>Something2Watch</h2>
                   <div>
                     <h3>Idea</h3>
@@ -89,7 +99,7 @@
                 </div>
               </li>
               <li class="slide slide2">
-                <div>
+                <div class="slideContent">
                   <h2>IfOnly</h2>
                   <div>
                     <h3>Idea</h3>
@@ -104,8 +114,45 @@
                   </div>
                 </div>
               </li>
-              <li class="slide slide3">SLIDE 3</li>
-              <li class="slide slide4">SLIDE 4</li>
+              <li class="slide slide3">
+                <div class="slideContent">
+                  <h2>StudentBeans</h2>
+                  <div>
+                      <p>Studentbeans is a website and app that provides students with discounts to thousands of different brands all over the world. I mostly worked on the Single Sign On and user management areas of the site. I worked closely with a Ruby on Rails back end developer and UX and Design specialist to impliment changes required as a result of recent GDPR legislation and general improvements to the signup and verification process, where success was measured by a decrease in the percentage drop off of user signups to user verifications.</p>
+                      <p>Coding standards were taking very seriously at StudentBeans, merge requests and code reviews were large part of the job. Having your own code checked and critiqued as well as reviewing and critiquing other developers code made me a better developer. On top of this, each squad was provided with a problem to solve, rather than simply being given a brief to fulfil. This bred teamwork and collaboration between all members of the squad.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="slide slide4">
+                <div class="slideContent">
+                    <h2>Jaguar & Land Rover Configurator</h2>
+                    <div>
+                      <p>The configurator was an amazingly complex project to work on. It involved vast amounts of data, much of which would change after a couple of site interactions by the user. The raw data was manipulated by a series of custom nodeJS middlewares and stored in a Redux state. Another challenge of the project was getting the sheer amount of data to fit in the available screen real-estate, especially on mobile. Many hours were spent with the designer making small tweaks to maximise the space utilised.</p>
+                      <p>The main aspect I worked on was the new 'Recommended Choice' initiative, which was largely driven direcly by the client. This entailed each market being able to set a 'recommended choice' for each category within the configuration. Each one would be identified to the user. An option was also added to view a fully configured 'recommended choice' vehicle, without having to do any configuration at all.</p>
+                    </div>
+                </div>
+              </li>
+              <li class="slide slide5">
+                <div class="slideContent">
+                  <h2>Jaguar & Land Rover DX</h2>
+                  <div>
+                    <p>This is the main 'Digital Experience' platform for Jaguar and Land Rover, across all markets worldwide. I was involved in many areas of the site, but the main aspect I worked on was a complete refresh of the Retailer Locator component. This required a large degree of attention to detail being considered one of the most important areas of the site, as it is the main way to direct customers to individual retailers to begin the sales process.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="slide slide6">
+                <div class="slideContent">
+                  <h2>Wallpapers</h2>
+                  <div>
+                    <h3>Idea</h3>
+                    <p>I love having colorful and interesting wallpapers on my mac! So, I decided to make a little app that would allow me to download the current trending images in the <a href="https://www.reddit.com/r/EarthPorn/" target="_">EarthPorn</a> sub-reddit on Reddit. I then setup my mac to cycle through the images changing my wallpaper every 30 minutes!</p>
+                    <h3>Challenges</h3>
+                    <p>There were no massively challenging aspects to this. Probably the biggest headache was working with the notoriously fiddley file system implementation in nodeJS.</p>
+                    <h3>Further Development Ideas</h3>
+                    <p>I have already implemented a settings file so that the user can easily configure things such as which subReddit to get the images from, where the downloaded images should be saved and the minimum image dimensions that should be allowed. If I were to develop it further, I would investigate a way of automatically setting the downloaded images as the wallpaper, rather than using the built in mac display settings tool and have the app run periodically, automatically; rather than having to manually set it as a scheduled task.</p>
+                  </div>
+                </div>
+              </li>
             </ul>  
           </div>
         </div>
