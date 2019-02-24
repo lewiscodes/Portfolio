@@ -12,7 +12,6 @@ $(document).ready(function () {
     }
   })
   
-  // $(window).on('load', function () {
   $(window).on('resize load', function () {
     var device = getDevice()
     if (device === 'mobile') {
@@ -102,17 +101,6 @@ $(document).ready(function () {
   $('.slider').css({ width: slideWidth })
   $('.slider ul').css({ width: sliderFullWidth, marginLeft: -slideWidth })
   $('.slider ul li:last-child').prependTo('.slider ul')
-
-  $(window).on('resize', function () {
-    $('.slide').css({width: window.innerWidth})
-    slideCount = $('.slider ul li').length
-    slideWidth = $('.slider ul li').width()
-    sliderFullWidth = (slideCount * slideWidth)
-
-    $('.slider').css({ width: slideWidth, height: slideHeight })
-    $('.slider ul').css({ width: sliderFullWidth, marginLeft: -slideWidth })
-    $('.slider ul li:last-child').prependTo('.slider ul')
-  })
 
   $('a.control_prev').click(function () {
     moveLeft(slideWidth)
