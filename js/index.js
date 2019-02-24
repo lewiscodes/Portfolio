@@ -12,6 +12,7 @@ $(document).ready(function () {
     }
   })
   
+  // $(window).on('load', function () {
   $(window).on('resize load', function () {
     var device = getDevice()
     if (device === 'mobile') {
@@ -56,21 +57,25 @@ $(document).ready(function () {
   }
   
   function openMobileNav () {
-    $('.mobileNavButton').removeClass('closed')
-    $('.mobileNavButton').addClass('open')
-    $('.mobileNavWrapper').removeClass('closed')
-    $('.mobileNavWrapper').addClass('open')
-    $('.bodyContainer').removeClass('closed')
-    $('.bodyContainer').addClass('open')
+    if ($('.mobileNavButton').hasClass('closed')) {
+      $('.mobileNavButton').removeClass('closed')
+      $('.mobileNavButton').addClass('open')
+      $('.mobileNavWrapper').removeClass('closed')
+      $('.mobileNavWrapper').addClass('open')
+      $('.bodyContainer').removeClass('closed')
+      $('.bodyContainer').addClass('open')
+    }
   }
   
   function closeMobileNav () {
-    $('.mobileNavButton').removeClass('open')
-    $('.mobileNavButton').addClass('closed')
-    $('.mobileNavWrapper').removeClass('open')
-    $('.mobileNavWrapper').addClass('closed')
-    $('.bodyContainer').removeClass('open')
-    $('.bodyContainer').addClass('closed')
+    if ($('.mobileNavButton').hasClass('open')) {
+      $('.mobileNavButton').removeClass('open')
+      $('.mobileNavButton').addClass('closed')
+      $('.mobileNavWrapper').removeClass('open')
+      $('.mobileNavWrapper').addClass('closed')
+      $('.bodyContainer').removeClass('open')
+      $('.bodyContainer').addClass('closed')
+    }
   }
 
   $('.name').on('click tap', function () {
